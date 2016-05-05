@@ -1,0 +1,12 @@
+[Desktop Entry]
+_Name=FireZero
+_Comment=Management for FireFighters
+_Keywords=FireZero;FireFighter;
+_X-GNOME-FullName=Management for FireFighters
+Exec=firezero
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=firezero
+Categories=GNOME;Tools;
+DBusActivatable=true
