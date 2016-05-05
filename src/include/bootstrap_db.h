@@ -1,5 +1,5 @@
 /*******************************************************************************\
- * bootstrap_db.h -- Description File.                                                    *
+ * bootstrap_db.h -- Description File.                                         *
  * Copyright (C) 2015  Teofanes Enrique Paz Moron <teofanesp12@gmail.com>      *
  *                                                                             *
  * FireZero is free software: you can redistribute it and/or modify            *
