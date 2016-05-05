@@ -1,4 +1,4 @@
-
+/*******************************************************************************\
  * login.c -- Using GUI.                                                       *
  * Copyright (C) 2015  Teofanes Enrique Paz Moron <teofanesp12@gmail.com>      *
  *                                                                             *
