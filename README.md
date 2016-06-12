@@ -1,5 +1,5 @@
 <p align="center" >
-  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0FQejtsq-qQ" frameborder="0" allowfullscreen></iframe>
+  <iframe width="560" height="315" src="https://www.youtube.com/watch?v=0FQejtsq-qQ" frameborder="0"></iframe>
 </p>
 
 # FireZero
