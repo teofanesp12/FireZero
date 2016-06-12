@@ -18,7 +18,7 @@ BUILDING
     Depois Teremos que configurar o MakeFile:
   
     ./configure
-    
+
     Agora Compilamos:
     
     make
