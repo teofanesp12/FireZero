@@ -30,4 +30,11 @@ RUN
 PACKING
 -------
    Para empacotar precisamos Instalar:
-    apt-get install 
+
+    apt-get install blhc devscripts dh-make debhelper autotools-dev
+   Logo depois precisamos Ativar o AutoTools:
+
+    autoreconf --install
+   Logo depois Creamos o Pacote:
+
+    debuild
