@@ -17,7 +17,12 @@ BUILDING
    Depois Teremos que configurar o MakeFile:
 
     ./configure
-    
-    Agora Compilamos:
-    
+   Agora Compilamos:
+
     make
+
+RUN
+---
+   Você Pode Usar o Comando:
+   
+   ./src/init/firezero
