@@ -1,0 +1,22 @@
+Source: firezero
+Section: misc
+Priority: optional
+Maintainer: Teofanes Enrique Paz Moron (Waskar Neil Paz Moron) <teofanesp12@gmail.com>
+Build-Depends: debhelper (>= 9), autotools-dev, libpq-dev, libgtk-3-dev
+Standards-Version: 3.9.6
+Homepage: http://dev-in-linux.blogspot.com.br/FireZero
+Vcs-Git: git://anonscm.debian.org/collab-maint/firezero.git
+#Vcs-Browser: https://anonscm.debian.org/gitweb/?p=collab-maint/firezero.git;a=summary
+
+Package: firezero
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: Management for firefighters
+ The administration of a firefighter's station in managing all permanent and
+ consumable goods, creating annual inventory and the loans of goods that,
+ in case of service need, have to be taken out of the institution,
+ the list of equipment of all departments inside the firefighter's station,
+ and the ones stored inside the vehicles.
+ It will also help the maintenance management, which will be controlled
+ according to mileage or for a determined period, and the fuel supply
+ for the vehicles fleet.
