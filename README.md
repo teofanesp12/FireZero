@@ -14,11 +14,10 @@ BUILDING
    Primeiro devemos instalar o autotools:
 
     autoreconf --install
-  
-    Depois Teremos que configurar o MakeFile:
-  
-    ./configure
+   Depois Teremos que configurar o MakeFile:
 
+    ./configure
+    
     Agora Compilamos:
     
     make
