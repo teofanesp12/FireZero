@@ -40,7 +40,7 @@ PACKING
     autoreconf --install
    Agora comprimir as Alterações e concluir:
 
-    tar -cvjf ../firezero-0.01.tar.gz .
+    tar -cvzf ../firezero-0.01.tar.gz .
     dh_make --f ../firezero-0.01.tar.gz -c gpl3
    Logo depois Creamos o Pacote:
 
