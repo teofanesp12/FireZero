@@ -11,7 +11,7 @@ INSTALL
       apt-get install libpq-dev libgtk-3-dev debhelper autotools-dev
    Ubuntu Install:
 
-   * [`PostgreSQL`](apt:libpq-dev)
+   * [`PostgreSQL`](http://gulpjs.com/)
    * [`GTK v3.0`](apt:libgtk-3-dev)
 BUILDING
 --------
