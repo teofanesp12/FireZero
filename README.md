@@ -26,3 +26,8 @@ RUN
    Você Pode Usar o Comando:
     
     ./src/init/firezero
+
+PACKING
+-------
+   Para empacotar precisamos Instalar:
+    apt-get install 
