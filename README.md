@@ -23,6 +23,6 @@ BUILDING
 
 RUN
 ---
-    Você Pode Usar o Comando:
+   Você Pode Usar o Comando:
     
-   ./src/init/firezero
+    ./src/init/firezero
