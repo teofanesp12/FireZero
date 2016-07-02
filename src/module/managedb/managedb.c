@@ -315,7 +315,7 @@ Backup_side(GtkWidget *widget, GtkWidget *stack){
     /* Banco de Dados */
     label_all = gtk_label_new("Banco de Dados: ");
     gtk_widget_set_halign(label_all, GTK_ALIGN_END);
-    gtk_box_pack_start(GTK_BOX(container_label), label_all, FALSE, FALSE, 5);
+    gtk_box_pack_start(GTK_BOX(container_label), label_all, FALSE, FALSE, 7);
     
     /* Senha Mestre */
     label_all = gtk_label_new("Senha Master: ");
@@ -840,11 +840,68 @@ validate_create_focus (GtkWidget *widget,
 /* Methods tools */
 void
 refresh_combo_db (FZ_BackUP* backup, FZ_Delete* delete){
-    if (backup)
+
+    if (connection())
+        return;
+    /*Executa o comando*/
+    result = PQexec(conn, "select datname from pg_database where datistemplate=False;");
+
+    if(!result){
+        alert(GTK_MESSAGE_ERROR, "Erro executando comando. ");
+    }else{
+        switch(PQresultStatus(result)){
+            case PGRES_EMPTY_QUERY:
+                printf("Nada aconteceu.\n");
+                break;
+            case PGRES_TUPLES_OK:
+                printf("A query retornou %d linhas.\n", PQntuples(result));
+                break;
+            case PGRES_FATAL_ERROR:
+                printf("Erro na Consulta: %s\n", PQresultErrorMessage(result));
+                break;
+            case PGRES_COMMAND_OK:
+                printf("%s linhas afetadas.\n", PQcmdTuples(result));
+                break;
+            default:
+                printf("Algum outro resultado ocorreu.\n");
+                break;
+        }
+    }
+
+    if (backup){
         g_print("BACKUP\n");
-    else if (delete)
+        /* Pegamos a Quantidade de campos capturados */
+        int campos = PQnfields(result);
+        int count  = PQntuples(result);
+
+        int i,j;
+        for(i = 0; i < count; i++)
+        {
+            // Percorre todas as colunas
+            for (j = 0; j < campos; j++)
+            {
+                // Imprime o valor do campo
+                gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (backup->combo_db), PQgetvalue(result, i, j));
+            }
+        }
+    }else if (delete){
         g_print("DELETE\n");
-    //TODO incluir os metodos para carregar as Databases.
+        /* Pegamos a Quantidade de campos capturados */
+        int campos = PQnfields(result);
+        int count  = PQntuples(result);
+
+        int i,j;
+        for(i = 0; i < count; i++)
+        {
+            // Percorre todas as colunas
+            for (j = 0; j < campos; j++)
+            {
+                // Imprime o valor do campo
+                gtk_combo_box_text_append_text (GTK_COMBO_BOX_TEXT (delete->combo_db), PQgetvalue(result, i, j));
+            }
+        }
+    }
+    return exit_connection();
 }
 
 /* the functions SQL */
