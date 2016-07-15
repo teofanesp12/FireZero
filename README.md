@@ -15,6 +15,7 @@ INSTALL
 
    * [`PostgreSQL`](apt:libpq-dev)
    * [`GTK v3.0`](apt:libgtk-3-dev)
+
 BUILDING
 --------
    Primeiro devemos instalar o autotools:
