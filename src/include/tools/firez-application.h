@@ -21,7 +21,6 @@
 
 #include <gtk/gtk.h>
 
-
 G_BEGIN_DECLS
 
 #define FIREZ_TYPE_APPLICATION               (firez_application_get_type ())
@@ -59,6 +58,9 @@ void              firez_application_set_configdb (FirezApplication       *applic
                                                   const gboolean configdb);
 //void              firez_application_set_initial_date (FirezApp *application,
 //                                                     const icaltimetype *date);
+void firez_application_set_window(FirezApplication *app,
+                                  GtkWindow *window);
+
 
 G_END_DECLS
 
