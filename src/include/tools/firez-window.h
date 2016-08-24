@@ -20,6 +20,7 @@
 #define _FIREZ_WINDOW_H_
 
 #include <gtk/gtk.h>
+#include <tools/firez-application.h>
 
 G_BEGIN_DECLS
 
@@ -70,7 +71,9 @@ struct _FirezWindowClass
 
 /* Public methods */
 GType 		 firez_window_get_type 			(void) G_GNUC_CONST;
-
+void firez_window_new(
+    FirezApplication *application
+);
 
 GtkWidget*
 new_window_app(
