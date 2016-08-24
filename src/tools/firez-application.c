@@ -21,6 +21,7 @@
 #endif
 
 #include <tools/firez-application.h>
+#include <tools/firez-window.h>
 
 //Modules:
 #include <module/login.h>
@@ -152,7 +153,7 @@ firez_application_activate (GApplication *application){
     if (priv->window != NULL){
         gtk_window_present (GTK_WINDOW (priv->window));
     }else{
-        priv->window = new_window_app(FIREZ_APPLICATION (application));
+        firez_window_new(FIREZ_APPLICATION (application));
     }
     
     if (priv->configdb)
@@ -329,6 +330,11 @@ firez_application_set_configdb (FirezApplication *application,
     priv->configdb = configdb;
 }
 
+void
+firez_application_set_window(FirezApplication *app, GtkWindow *window){
+    FirezApplicationPrivate *priv = app->priv;
+    priv->window = window;
+}
 /*
 void
 firez_application_set_initial_date (FirezApplication *application,
