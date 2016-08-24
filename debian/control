@@ -1,5 +1,5 @@
 Source: firezero
-Section: misc
+Section: gnome
 Priority: optional
 Maintainer: Teofanes Enrique Paz Moron (Waskar Neil Paz Moron) <teofanesp12@gmail.com>
 Build-Depends: debhelper (>= 9), autotools-dev, libpq-dev, libgtk-3-dev
