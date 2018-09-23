@@ -1,4 +1,4 @@
-?package(firezero):needs="X11" section="Applications/Office"\
+?package(firezero):needs="X11" section="Applications/Tools"\
   hints="Fogo" title="FireZero" \
   command="/usr/bin/firezero" \
   icon="/usr/share/pixmaps/firezero.xpm"

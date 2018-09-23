@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<gresources>
+  <gresource prefix="/org/fire/zero"><!-- id="org.fire.zero" -->
+    <file compressed="true" preprocess="xml-stripblanks">ui/firez-fighter-edit.ui</file>
+  </gresource>
+</gresources>
